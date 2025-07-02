@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.shelf {
+    display: flex;
+    gap: 10px;
+}
+
+.callForm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2em;
+}
+
+.book-container {
+    position: relative;
+    width: 130px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    height: 50px;
+}
+
+.form-container {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: fit-content;
+    height: 300px;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addBtn {
+    
+    margin-top: 30px;
+    width: 70px;
+}
+
+input[type="text"] {
+    width: 400px;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+.deleteBtn {
+   position: absolute;
+    right: 0;
+    top: 0;
+}
