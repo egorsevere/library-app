@@ -2,15 +2,15 @@ const myLibrary = [];
 
  const shelf = document.querySelector("main");
 
-function Book(author, title, pages, readStatus = false) {
-    if(!new.target) {
-        throw Error("You forgot set propety 'name' ")
-    }
+class Book {
+   constructor(author, title, pages, readStatus = false) {
    this.author = author,
    this.title = title,
    this.pages = pages,
-   this.readStatus = readStatus,
-   this.toggleReadStatus = function () {
+   this.readStatus = readStatus
+   }
+   
+   toggleReadStatus = function () {
      this.readStatus ? this.readStatus = false : this.readStatus = true;
    }
 }
@@ -58,10 +58,12 @@ const deleteBtn = document.createElement("button");
         }
         
          shelf.removeChild(this.parentElement)
+         console.clear()
+         console.log(myLibrary)
          
       })
       bookContainer.appendChild(deleteBtn);
-
+      console.log(myLibrary)
       myLibrary.push(book)
       shelf.appendChild(bookContainer)
 }
